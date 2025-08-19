@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import EventMetrics from "@/components/EventMetrics";
 import About from "@/components/About";
 import Speakers from "@/components/Speakers";
-import Tribute from "@/components/Tribute";
 import Agenda from "@/components/Agenda";
 import Sponsorship from "@/components/Sponsorship";
 import Contact from "@/components/Contact";
@@ -27,7 +26,6 @@ export default function Home() {
           <Agenda />
           <Venue />
           <Speakers />
-          <Tribute />
           <Sponsorship />
           <Contact />
         </main>

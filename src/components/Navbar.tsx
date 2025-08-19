@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 w-full z-50 font-sans transition-all duration-300 ${
         atTop 
           ? "bg-transparent" 
-          : "bg-black/10 backdrop-blur-md shadow-md"
+          : "bg-black/20 backdrop-blur-md shadow-lg"
       }`}
       aria-label="Main Navigation"
     >
@@ -128,8 +128,9 @@ const Navbar: React.FC = () => {
           onClick={() => handleSidebarToggle(false)}
         />
         
+        {/* PERUBAHAN PENTING: Hapus kondisi atTop dari background sidebar */}
         <div 
-          className={`absolute right-0 top-0 h-full w-full bg-black/40 backdrop-blur-lg p-8 flex flex-col transition-transform duration-300 ease-in-out ${
+          className={`absolute right-0 top-0 h-full w-full bg-black/60 backdrop-blur-lg p-8 flex flex-col transition-transform duration-300 ease-in-out ${
             open ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -140,7 +141,7 @@ const Navbar: React.FC = () => {
           >
             &times;
           </button>
-          
+
           <ul className="mt-12 space-y-4">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 const FEATURES = [
   "Membangkitkan kesadaran jiwa tentang fana-nya kehidupan dunia",
@@ -23,32 +23,92 @@ const Card: React.FC<{
 );
 
 const tributes = [
-  { name: 'Ais', desc: 'wajah ceria, pejuang dakwah' },
-  { name: 'Badi', desc: 'penjaga shalat, sahabat setia' },
-  { name: 'Harits', desc: 'tenang dan tulus, telah lebih dulu pulang' },
+  { 
+    name: 'Muhammad Harits', 
+    desc: '',
+    image: '/images/harits.jpg' // Ganti dengan path gambar yang sesuai
+  },
+  { 
+    name: 'Badi Uzzamman', 
+    desc: '',
+    image: '/images/badi.jpg' // Ganti dengan path gambar yang sesuai
+  },
+  { 
+    name: 'M. Naufal Harits', 
+    desc: '',
+    image: '/images/n_harits.jpg' // Ganti dengan path gambar yang sesuai
+  },
 ];
 
-const Tribute: React.FC = () => (
-  <div className="max-w-5xl w-full text-center z-10 mx-auto">
-    <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-[#e2b86a] drop-shadow-lg tracking-tight">
-      Untuk Mereka yang Telah Mendahului
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-center">
-      {tributes.map((t, i) => (
-        <div key={i} className="bg-transparent rounded-2xl shadow-2xl p-12 flex flex-col items-center border border-[#e2b86a]/20 hover:scale-105 transition-transform duration-300">
-          <div className="w-24 h-24 bg-[#e2b86a] rounded-full mb-4 flex items-center justify-center text-4xl text-[#0a0a0a] shadow-lg">🕊️</div>
-          <span className="font-bold text-[#C3BEA1] mb-2 text-xl">{t.name}</span>
-          <span className="text-[#C3BEA1] text-lg font-medium">{t.desc}</span>
-        </div>
-      ))}
+const Tribute: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const handleCardClick = (index: number) => {
+    if (activeIndex === index) {
+      setActiveIndex(null); // Klik lagi pada card yang sama akan nonaktifkan highlight
+    } else {
+      setActiveIndex(index); // Set card yang diklik sebagai aktif
+    }
+  };
+
+  return (
+    <div className="max-w-5xl w-full text-center z-10 mx-auto py-12">
+      <h2 className="text-3xl md:text-4xl font-normal mb-10 text-[#e2b86a] drop-shadow-lg tracking-tight">
+        Untuk Mereka Para <span className="text-white font-bold">Pemakmur Masjid</span>
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center items-stretch">
+        {tributes.map((t, index) => (
+          <div 
+            key={index} 
+            className={`relative h-96 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ${
+              activeIndex === index 
+                ? 'scale-105 shadow-2xl ring-4 ring-[#e2b86a] ring-opacity-80' 
+                : activeIndex !== null 
+                  ? 'grayscale brightness-50 scale-95' 
+                  : 'grayscale-0 brightness-100'
+            }`}
+            onClick={() => handleCardClick(index)}
+          >
+            {/* Gambar dengan rasio 4:5 */}
+            <div className="absolute inset-0">
+              <img
+                src={t.image}
+                alt={t.name}
+                className="w-full h-full object-cover transition-transform duration-700"
+              />
+              
+              {/* Overlay gradient untuk teks */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+            </div>
+            
+            {/* Konten teks */}
+            <div className={`absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 ${
+              activeIndex === index ? 'translate-y-0' : 'translate-y-2'
+            }`}>
+              <h3 className="text-2xl font-bold mb-2">{t.name}</h3>
+              <p className="text-sm opacity-90">{t.desc}</p>
+            </div>
+            
+            {/* Icon dove yang muncul saat dihover/diklik */}
+            <div className={`absolute top-4 right-4 w-10 h-10 bg-[#e2b86a] rounded-full flex items-center justify-center text-black transition-all duration-300 ${
+              activeIndex === index ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+            }`}>
+              🕊️
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-20 px-4">
+    <section id="about" className="py-20 px-4 mb-24">
       <Tribute />
+      <h2 className="text-3xl md:text-4xl font-semibold text-[#e2b86a] mt-12 mb-12 leading-tight text-center w-full">
+        Agenda Perjalanan <span className="text-white font-bold">OTW Jannah</span>
+      </h2>
 
       {/* Highlighted transformasi text */}
       <div className="w-full text-center mt-16 mb-8">
