@@ -8,7 +8,7 @@ const speakers = [
     img: '/images/muzammil.png' // Ganti dengan path gambar yang sesuai
   },
   { 
-    name: 'Ust. Faiz Zanad', 
+    name: 'Ust. Faiz Sanad', 
     title: 'Founder @Taubatter',
     img: '/images/faiz.png' // Ganti dengan path gambar yang sesuai
   },
@@ -31,7 +31,7 @@ const Speakers = () => {
   };
 
   return (
-    <section id="speakers" className="py-20 px-4 text-center bg-[#0a0a0a]">
+    <section id="speakers" className="py-20 px-4 text-center bg-transparent">
       <h2 className="text-3xl md:text-4xl font-normal mb-16 text-[#e2b86a]">Insya Allah dengan<span className="font-bold text-white"> pembicara yang menginspirasi</span></h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 max-w-6xl mx-auto">
         {speakers.map((speaker, index) => (
