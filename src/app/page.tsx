@@ -5,7 +5,6 @@ import About from "@/components/About";
 import Speakers from "@/components/Speakers";
 import Agenda from "@/components/Agenda";
 import Sponsorship from "@/components/Sponsorship";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Countdown from "@/components/Countdown";
 import Venue from "@/components/Venue";
@@ -23,11 +22,10 @@ export default function Home() {
           <Countdown />
           <EventMetrics />
           <About />
+          <Speakers />
           <Agenda />
           <Venue />
-          <Speakers />
           <Sponsorship />
-          <Contact />
         </main>
         <Footer />
       </div>
