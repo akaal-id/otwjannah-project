@@ -40,28 +40,26 @@ const Hero: React.FC = () => (
           maxWidth: "1920px",
           height: "auto",
           transformOrigin: "center",
-          marginTop: "72px",
+          marginTop: "0px",
         }}
       />
     </div>
-    {/* Scroll button above gradient */}
-    <div className="relative z-30 flex flex-col items-center w-full" style={{marginTop: '0px'}}>
+    
+    {/* Scroll button above gradient - HANYA TAMPIL DI MOBILE */}
+    <div className="relative z-30 flex flex-col items-center w-full md:hidden" style={{marginTop: '0px'}}>
       <a
-        href="#about"
-        className="z-20"
-        aria-label="Scroll to content"
-        style={{ display: 'block' }}
-      >
-        <img
-          src="/images/arrow-down@2x.png"
-          alt="Scroll Down"
-          width={48}
-          height={48}
-          loading="lazy"
-          className="hero-arrow-responsive"
-        />
-      </a>
+            href="https://hegira-1-5.vercel.app"
+            target="_blank"
+            rel="noopener"
+            className="px-6 py-2 rounded-md font-semibold text-white text-base whitespace-nowrap"
+            style={{
+              background: "linear-gradient(90deg, #cea15c 0%, #ffd992 50%, #703f23 100%)"
+            }}
+          >
+            Get Your Ticket
+          </a>
     </div>
+    
     {/* Smooth gradient transition at the bottom */}
     <div
       className="pointer-events-none absolute left-0 right-0 bottom-0 h-12 sm:h-24 z-20"
