@@ -14,7 +14,7 @@ const Venue = () => {
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdnHF4mc7ITC4pxF6X4e0uI9gAVIABisU2c-v-SQeQ1Iga8zY7Qik3zNq7vHCSVH7_TflHzK-q8cKXQSQ2zQQa1XyvKb_9V95WHDR2OY1rH3mknfwjQLzO1yv56dekiyu_eXf5sbX6_nCr/s1600/IMG20180101121549.jpg" className="w-full h-full object-cover opacity-20" alt="Audience"/>
         </div>
     <div className="w-full max-w-[1152px] px-12 relative z-10 flex justify-center items-center mx-auto">
-            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden grid md:grid-cols-5 w-full">
+            <div className="bg-[#161616] rounded-2xl shadow-2xl overflow-hidden grid md:grid-cols-5 w-full">
                <div className="md:col-span-2">
                    <iframe
                        className="w-full h-full min-h-[240px] md:min-h-0 border-0"
@@ -27,8 +27,8 @@ const Venue = () => {
                </div>
                <div className="md:col-span-3 p-8 md:p-12 flex flex-col justify-center">
                    <p className="text-sm md:text-lg text-[#BE9A64] font-semibold mb-2">THE VENUE</p>
-                   <h2 className="text-xl md:text-5xl font-semibold text-gray-800">{venueName}</h2>
-                   <p className="text-sm md:text-sm mt-4 text-gray-600 font-normal">{venueAddress}</p>
+                   <h2 className="text-xl md:text-5xl font-semibold text-white">{venueName}</h2>
+                   <a href={googleMapsDirectionsUrl} className="text-sm md:text-sm mt-4 text-white-20 font-normal hover:text-[#BE9A64] ease-in-out duration-300">{venueAddress}</a>
                 <div className="text-sm md:text-sm mt-8 flex flex-col md:flex-row items-start md:items-center gap-4">
                     <div className="flex items-center gap-3 text-[#BE9A64] font-semibold leading-snug">
                         <svg

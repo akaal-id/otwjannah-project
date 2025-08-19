@@ -76,7 +76,7 @@ const Agenda = () => {
   };
 
   return (
-    <section id="agenda" className="py-20 px-4">
+    <section id="agenda" className="px-4">
       <h2 className="text-3xl md:text-4xl font-semibold text-[#e2b86a] mb-12 leading-tight text-center w-full">
         Agenda Perjalanan <span className="text-white font-bold">OTW Jannah</span>
       </h2>
