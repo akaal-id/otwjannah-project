@@ -77,7 +77,7 @@ const Hero: React.FC = () => (
           background: url('/images/Main Background_ver.png') center/cover no-repeat !important;
         }
         .hero-logo-responsive {
-          max-width: 480px !important;
+          max-width: 360px !important;
           margin-top: 84px !important;
         }
         .hero-arrow-responsive {
