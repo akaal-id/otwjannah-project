@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove all navbar-related styles, keep only main background and text color */
+:root {
+  --color-bg: #0a0a0a;
+  --color-text: #C3BEA1;
+  --color-accent: #6EA8AB;
+  --color-cta: #48838D;
+  /* Map Tailwind's default --font-sans to Plus Jakarta Sans so
+    the `font-sans` utility and other Tailwind rules use it */
+  --font-sans: var(--font-plus-jakarta-sans);
+}
+
+body {
+  font-family: var(--font-plus-jakarta-sans, 'Plus Jakarta Sans', 'sans-serif');
+  /* vertical three-stop gradient: dark -> warm brown -> dark */
+  background: linear-gradient(to bottom, #0a0a0a 35%, #352713 40%, #0a0a0a 55%);
+  color: var(--color-text);
+}
+
+/* Navbar gradient and solid background effect */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: background 0.4s, opacity 0.4s;
+  background: linear-gradient(
+    to bottom,
+    rgb(48, 48, 48) 0%,   /* fully transparent at top */
+    rgba(48, 48, 48, 0) 50%,  /* still transparent at halfway */
+    rgba(0, 0, 0, 0) 100% /* fade in at bottom */
+  );
+}
+
+.navbar.solid {
+  background: rgba(0, 0, 0, 0.5);
+  transition: background 0.4s, opacity 0.4s;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+  }
+}
