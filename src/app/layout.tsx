@@ -12,6 +12,20 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "On The Way to Jannah",
   description: "Landing page for the Islamic spiritual event On The Way to Jannah",
+  icons: {
+    icon: [
+      {
+        url: "/images/main-rismada.png",
+        type: "image/png",
+      },
+    ],
+    apple: [
+      {
+        url: "/images/main-rismada.png",
+        type: "image/png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

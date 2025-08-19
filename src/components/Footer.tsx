@@ -28,13 +28,13 @@ const Footer = () => (
         
         {/* Kolom 2: Menu Navigasi */}
         <div className="flex flex-col items-center md:items-start">
-          <h3 className="text-lg font-semibold text-[#e2b86a] mb-4">Navigasi</h3>
+          <h3 className="text-lg font-semibold text-[#e2b86a] mb-4">Navigation</h3>
           <div className="flex flex-col space-y-2 text-center md:text-left">
             <a href="#home" className="text-sm hover:text-[#e2b86a] transition-colors duration-200">Home</a>
-            <a href="#about" className="text-sm hover:text-[#e2b86a] transition-colors duration-200">Tentang Kami</a>
+            <a href="#about" className="text-sm hover:text-[#e2b86a] transition-colors duration-200">About US</a>
             <a href="#agenda" className="text-sm hover:text-[#e2b86a] transition-colors duration-200">Agenda</a>
-            <a href="#speakers" className="text-sm hover:text-[#e2b86a] transition-colors duration-200">Pembicara</a>
-            <a href="#venue" className="text-sm hover:text-[#e2b86a] transition-colors duration-200">Lokasi</a>
+            <a href="#speakers" className="text-sm hover:text-[#e2b86a] transition-colors duration-200">Speakers</a>
+            <a href="#venue" className="text-sm hover:text-[#e2b86a] transition-colors duration-200">Venue</a>
             <a href="#sponsors" className="text-sm hover:text-[#e2b86a] transition-colors duration-200">Sponsorship</a>
           </div>
         </div>
