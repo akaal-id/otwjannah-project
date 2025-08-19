@@ -11,7 +11,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "On The Way to Jannah",
-  description: "Landing page for the Islamic spiritual event On The Way to Jannah",
+  description: "Yuk Barengan Jadi Muda Berkah Ending Indah",
   icons: {
     icon: [
       {
