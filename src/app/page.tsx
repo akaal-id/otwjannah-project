@@ -8,6 +8,7 @@ import Sponsorship from "@/components/Sponsorship";
 import Footer from "@/components/Footer";
 import Countdown from "@/components/Countdown";
 import Venue from "@/components/Venue";
+import Registration from "@/components/Registration";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           <About />
           <Speakers />
           <Agenda />
+          <Registration />
           <Venue />
           <Sponsorship />
         </main>
